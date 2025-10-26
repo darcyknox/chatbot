@@ -1,0 +1,12 @@
+services:
+  chatbot:
+    image: chatbot
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3978:3978
+      - 9229:9229
+    command: ["node", "--inspect=0.0.0.0:9229", "src/index.js"]
