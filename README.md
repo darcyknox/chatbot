@@ -27,3 +27,15 @@ Files of interest
 - src/bot.js — message handling and LUIS example
 - public/index.html — quick local web UI
 - .env.example — environment variables
+
+Reinstalling dependencies (useful after switching Node versions)
+
+If you switch Node versions (use `nvm use 18`), run the helper to remove `node_modules` and `package-lock.json` and reinstall:
+
+```bash
+# from project root
+nvm use 18   # or ensure Node 18 is active
+npm run reinstall
+```
+
+This will recreate `package-lock.json` and install packages compatible with the active Node version.
