@@ -39,3 +39,15 @@ npm run reinstall
 ```
 
 This will recreate `package-lock.json` and install packages compatible with the active Node version.
+
+Test coverage
+-----------
+
+The project runs Jest with coverage. Locally you can run:
+
+```bash
+npm test
+# coverage output will be placed under ./coverage
+```
+
+CI is configured to upload coverage to Codecov. To enable uploads for private repos, add a `CODECOV_TOKEN` repository secret.

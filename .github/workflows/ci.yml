@@ -27,7 +27,14 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Run tests
+      - name: Run tests (with coverage)
         run: npm test
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./coverage/**/lcov.info
+          fail_ci_if_error: false
+        # To upload to private repos, set CODECOV_TOKEN in repository secrets.
