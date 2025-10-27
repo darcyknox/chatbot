@@ -1,5 +1,7 @@
 # Chatbot Starter (Node.js + Azure Bot Service patterns)
 
+[![codecov](https://codecov.io/gh/darcyknox/chatbot/branch/main/graph/badge.svg)](https://codecov.io/gh/darcyknox/chatbot)
+
 Quick start
 1. Install dependencies
    npm install
